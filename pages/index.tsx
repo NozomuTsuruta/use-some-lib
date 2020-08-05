@@ -4,9 +4,8 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Next.js Template</title>
+        <title>買い物リスト</title>
       </Head>
-      <h1>Hello Next.js</h1>
     </>
   );
 };

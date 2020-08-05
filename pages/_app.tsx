@@ -1,10 +1,31 @@
 import { AppProps } from 'next/app';
-
-import '../styles/global.scss'
+import '../styles/global.scss';
 import { Provider } from '../redux/store';
+import Header from '../components/Header';
+import Navigation from '../components/Navigation';
+import styled from 'styled-components';
 
 const App = ({ Component, pageProps }: AppProps) => {
-  return <Provider><Component {...pageProps} /></Provider>;
+  return (
+    <Provider>
+      <GridContainer>
+        <Header />
+        <Navigation link='form' name='追加' />
+        <Navigation link='list' name='リスト' />
+        <Component {...pageProps} />
+      </GridContainer>
+    </Provider>
+  );
 };
 
 export default App;
+
+const GridContainer = styled.div`
+  display: grid;
+  grid-template:
+  'header     header' 200px
+  'navigation navigation' 100px
+  'component  component' 1fr
+  /1fr        1fr;
+
+`;
