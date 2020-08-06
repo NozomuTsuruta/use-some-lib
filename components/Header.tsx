@@ -9,8 +9,9 @@ const Header = () => {
   );
 };
 
+
+export default Header;
+
 const HeaderContainer=styled.div`
   grid-area: header;
 `
-
-export default Header;

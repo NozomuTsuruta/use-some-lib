@@ -12,6 +12,8 @@ const Navigation = ({ link, name }: { link: string; name: string }) => {
 
 export default Navigation;
 
-const NavigationContainer = styled.a<{link: string}>`
-  grid-area: navigation;
-`
+const NavigationContainer = styled.a<{ link: string }>`
+  grid-area: ${({ link }) => link};
+  text-align: center;
+  cursor: pointer;
+`;

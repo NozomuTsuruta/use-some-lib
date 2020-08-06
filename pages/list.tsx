@@ -1,12 +1,17 @@
 import React from 'react'
+import styled from 'styled-components'
+import Card from '../components/Card'
 
 const List = () => {
   return (
-    <div>
-      
-    </div>
+    <ListContainer>
+      <Card/>
+    </ListContainer>
   )
 }
 
 export default List
 
+const ListContainer = styled.div`
+
+`
