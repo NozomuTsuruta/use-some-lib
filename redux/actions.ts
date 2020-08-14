@@ -5,12 +5,8 @@ export const addProduct = (product: Omit<Product, 'id'>) => ({
   payload: product,
 });
 
-export const deleteProduct = (id: Pick<Product, 'id'>) => ({
+export const deleteProduct = (id: string) => ({
   type: ActionTypes.addProduct,
   payload: id,
 });
 
-export const editProduct = (productAndId: Product) => ({
-  type: ActionTypes.addProduct,
-  payload: productAndId,
-});
