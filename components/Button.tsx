@@ -2,18 +2,17 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 
 interface ButtonProps {
-  handleSubmit: Function;
   value: string;
   type: 'button'|'submit';
 }
 
-const Button: FC<ButtonProps> = ({value,handleSubmit,type}) => {
+const Button: FC<ButtonProps> = ({value,type}) => {
   return (
-  <StyledButton type={type} onSubmit = {handleSubmit}>{value}</StyledButton>>
+  <StyledButton type={type}>{value}</StyledButton>
   )
 }
 
-export default Button
+export default Button;
 
 const StyledButton = styled.button`
   background-color: black;

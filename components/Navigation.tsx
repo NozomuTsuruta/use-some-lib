@@ -16,4 +16,8 @@ const NavigationContainer = styled.a<{ link: string }>`
   grid-area: ${({ link }) => link};
   text-align: center;
   cursor: pointer;
+  line-height: 100px;
+  background: black;
+  color: white;
+  font-weight: bold;
 `;

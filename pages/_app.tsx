@@ -23,8 +23,9 @@ export default App;
 const GridContainer = styled.div`
   display: grid;
   grid-template:
-    'header     header'     200px
-    'form       list'       100px
-    'component  component'  1fr
-    /1fr        1fr;
+    'header     header      header'     150px
+    '...        ...         ...'        2px
+    'form       ...         list'       100px
+    'component  component   component'  1fr
+    /1fr        2px        1fr;
 `;
