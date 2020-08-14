@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 interface InputProps {
   setValue: Function;
   label: string;
-  value: string | number | undefined;
+  value: string;
   type: 'text' | 'number';
 }
 

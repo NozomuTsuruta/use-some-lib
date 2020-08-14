@@ -1,16 +1,19 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
+import React, { FC } from 'react';
+import styled from 'styled-components';
 
 interface ButtonProps {
   value: string;
-  type: 'button'|'submit';
+  type?: 'submit';
+  clickEvent?: Function;
 }
 
-const Button: FC<ButtonProps> = ({value,type}) => {
+const Button: FC<ButtonProps> = ({ value, type, clickEvent }) => {
   return (
-  <StyledButton type={type}>{value}</StyledButton>
-  )
-}
+    <StyledButton type={type} onClick={clickEvent as any}>
+      {value}
+    </StyledButton>
+  );
+};
 
 export default Button;
 
@@ -21,4 +24,4 @@ const StyledButton = styled.button`
   &:hover {
     opacity: 0.7;
   }
-`
+`;
